@@ -1,0 +1,71 @@
+[v-cloak] {
+  display: none; }
+
+.answer {
+  list-style: none inside;
+  text-align: center !important;
+  font-weight: bold;
+  font-size: 30px; }
+
+.answer.secret {
+  background-color: blue; }
+
+.answer {
+  margin: 2px 0; }
+
+.answer:first-child {
+  margin: 0; }
+
+#answers {
+  counter-reset: answers-counter; }
+
+.answer.found:before {
+  counter-increment: answers-counter; }
+
+.answer.secret:after {
+  counter-increment: answers-counter; }
+
+.answer.found:before {
+  content: counter(answers-counter) ". " attr(data-answer); }
+
+.answer.secret:after {
+  content: counter(answers-counter);
+  display: inline-block;
+  position: relative;
+  color: #fff; }
+
+#errors {
+  display: none; }
+
+#errors.show {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  width: 100%;
+  text-align: center; }
+
+.cross {
+  background: red;
+  height: 100px;
+  position: relative;
+  width: 20px;
+  transform: rotate(45deg);
+  display: inline-block; }
+
+.cross:after {
+  background: red;
+  content: "";
+  height: 20px;
+  left: -40px;
+  position: absolute;
+  top: 40px;
+  width: 100px; }
+
+.cross {
+  margin-left: 80px; }
+
+.cross:first-of-type {
+  margin: 0; }
+
+/*# sourceMappingURL=app.css.map */
